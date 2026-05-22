@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{% block title %}Grade 3 Dashboard{% endblock %}</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          Segoe UI,
+          sans-serif;
+        background: #f0f4f8;
+        color: #1a202c;
+      }
+
+      nav {
+        background: #1a202c;
+        padding: 1rem 2rem;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      nav a {
+        color: #a0aec0;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      nav a:hover {
+        color: white;
+      }
+      nav .brand {
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+      }
+      p.subtitle {
+        color: #718096;
+        margin-bottom: 1.5rem;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+        margin-bottom: 1.5rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+      th {
+        background: #f7fafc;
+        color: #718096;
+        text-align: left;
+        padding: 0.7rem 1rem;
+        border-bottom: 2px solid #e2e8f0;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+      td {
+        padding: 0.7rem 1rem;
+        border-bottom: 1px solid #e2e8f0;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      tr:hover td {
+        background: #f7fafc;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="/">📊 Grade 3</a>
+      <a href="/">Overview</a>
+      <a href="/section/Pink">🟣 Pink</a>
+      <a href="/section/White">⚪ White</a>
+      <a href="/section/Yellow">🟡 Yellow</a>
+    </nav>
+
+    <main>{% block content %}{% endblock %}</main>
+  </body>
+</html>
