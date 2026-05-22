@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}Overview — Grade 3{% endblock %} {%
+block content %}
+
+<h1>Grade 3 Dashboard</h1>
+<p class="subtitle">Showing Section Pink — {{ students|length }} students</p>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>Roll No.</th>
+        <th>Student Name</th>
+        <th>Total</th>
+        <th>Percentage</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ s['Roll No.'] }}</td>
+        <td>{{ s['Student Name'] }}</td>
+        <td>{{ s['Total'] }}</td>
+        <td>{{ s['Percentage'] }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
