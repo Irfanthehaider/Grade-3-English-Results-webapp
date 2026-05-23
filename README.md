@@ -13,6 +13,11 @@ Flask + Jinja2 dashboard for Grade 3 English section results.
    - `English_Boys_White.xlsx`
    - `English_Boys_Yellow.xlsx`
 
+2. Place html files in the `template/` folder:
+   - `base.html`
+   - `index.html`
+   - `section.html`
+   - `student.html`
 3. Run the app:
    ```bash
    python app.py
