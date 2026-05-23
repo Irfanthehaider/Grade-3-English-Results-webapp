@@ -1,0 +1,41 @@
+{% extends "base.html" %} {% block title %}Section {{ section }} — Grade 3{%
+endblock %} {% block content %}
+<h1>Section {{ section }}</h1>
+<p class="subtitle">{{ students|length }} students · Average: {{ avg }}%</p>
+
+<div class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Roll No.</th>
+        <th>Student Name</th>
+        <th>Total</th>
+        <th>Percentage</th>
+        <th>Grade</th>
+        <th>Detail</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in students %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ s['Roll No.'] }}</td>
+        <td>{{ s['Student Name'] }}</td>
+        <td>{{ s['Total'] }}</td>
+        <td>{{ s['Percentage'] }}%</td>
+        <td>{{ s['Grade'] }}</td>
+        <td><a href="/student/{{ s['Roll No.'] }}">View →</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="card">
+  <h2 style="font-size: 1rem; font-weight: 700; margin-bottom: 1rem">
+    Grade Distribution
+  </h2>
+  {{ grade_chart | safe }}
+</div>
+{% endblock %}
