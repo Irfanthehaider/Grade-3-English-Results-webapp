@@ -85,15 +85,24 @@
       tr:hover td {
         background: #f7fafc;
       }
+      .pink {
+        color: #e91e8c;
+      }
+      .white {
+        color: #a0aec0;
+      }
+      .yellow {
+        color: #f5a623;
+      }
     </style>
   </head>
   <body>
     <nav>
-      <a class="brand" href="/">📊 Grade 3</a>
-      <a href="/">Overview</a>
-      <a href="/section/Pink">🟣 Pink</a>
-      <a href="/section/White">⚪ White</a>
-      <a href="/section/Yellow">🟡 Yellow</a>
+      <a class="brand" href="/">Grade 3 Overview</a>
+      <!--<a href="/">Overview</a>-->
+      <a href="/section/Pink" class="pink">Pink</a>
+      <a href="/section/White" class="white">White</a>
+      <a href="/section/Yellow" class="yellow">Yellow</a>
     </nav>
 
     <main>{% block content %}{% endblock %}</main>
